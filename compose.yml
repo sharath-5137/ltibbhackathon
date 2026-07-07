@@ -9,7 +9,7 @@ services:
     networks:
       - bbapp-network
     volumes:
-      - bbapp-db-data:var/lib/mysql
+      - bbapp-db-data:/var/lib/mysql
     ports:
       - "3306:3306"
   
