@@ -2,8 +2,7 @@ services:
   db_service:
     image: sgsk5137/bbapp:db
     container_name: mysqldb
-    restart_policy:
-        condition: on-failure
+    restart: on-failure
     networks:
       - bbapp-network
     volumes:
@@ -13,9 +12,8 @@ services:
   
   app_service:
     image: sgsk5137/bbapp:app
-    container_name: mysqldb
-    restart_policy:
-        condition: on-failure
+    container_name: bbapp
+    restart: on-failure
     networks:
       - bbapp-network
     ports:
